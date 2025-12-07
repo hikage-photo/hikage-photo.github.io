@@ -10,7 +10,7 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: system-ui, sans-serif;
       background: #09090b;
       color: #f4f4f5;
     }
@@ -114,24 +114,39 @@
     <h1>Plants</h1>
     <p class="intro">季節ごとに撮った花の写真たち。</p>
 
-    <section class="grid">
-      <figure>
-        <img src="photos/sunflower.jpg" alt="ひまわり">
-        <figcaption>夏の光をいっぱいに浴びたひまわり。</figcaption>
-      </figure>
-
-      <figure>
-        <img src="photos/lotus.jpg" alt="蓮">
-        <figcaption>静かな水面から立ち上がる蓮の花。</figcaption>
-      </figure>
-
-      <figure>
-        <img src="photos/red_spider_lily.jpg" alt="彼岸花">
-        <figcaption>赤い彼岸花。少しだけ不穏で、でも綺麗な色。</figcaption>
-      </figure>
-
-
-    </section>
+    <section class="grid" id="plants-grid"></section>
   </main>
+
+  <script>
+    // 📷 写真データ（ここに追加するだけ）
+    const plants = [
+      {
+        src: "photos/sunflower.jpg",
+        alt: "ひまわり",
+        caption: "夏の光をいっぱいに浴びたひまわり。"
+      },
+      {
+        src: "photos/lotus.jpg",
+        alt: "蓮",
+        caption: "静かな水面に咲いた蓮の花。"
+      },
+      {
+        src: "photos/red_spider_lily.jpg",
+        alt: "彼岸花",
+        caption: "秋に咲く赤い彼岸花。強い色と静けさ。"
+      }
+    ];
+
+    const grid = document.getElementById("plants-grid");
+
+    plants.forEach(photo => {
+      const fig = document.createElement("figure");
+      fig.innerHTML = `
+        <img src="${photo.src}" alt="${photo.alt}">
+        <figcaption>${photo.caption}</figcaption>
+      `;
+      grid.appendChild(fig);
+    });
+  </script>
 </body>
 </html>
