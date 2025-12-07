@@ -5,47 +5,179 @@
   <title>hikage photo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #111;
-      color: #eee;
-      padding: 32px 16px 64px;
-      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #09090b;
+      color: #f4f4f5;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      letter-spacing: .02em;
-    }
-
-    .photo {
+    header {
       max-width: 960px;
-      margin: 0 auto 24px;
+      margin: 0 auto;
+      padding: 20px 16px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    img {
+    .logo {
+      font-size: 1.1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      margin-left: 14px;
+      text-decoration: none;
+      color: #e4e4e7;
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 16px 48px;
+    }
+
+    .hero {
+      margin-top: 12px;
+    }
+
+    .hero-img-wrap {
+      border-radius: 10px;
+      overflow: hidden;
+      background: #18181b;
+    }
+
+    .hero img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
-      border-radius: 4px;
     }
 
-    figcaption {
+    .hero-text {
+      margin-top: 12px;
+    }
+
+    .hero-title {
+      font-size: 1.4rem;
+      margin: 0 0 4px;
+    }
+
+    .hero-caption {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    .sections {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .section-card {
+      border-radius: 10px;
+      padding: 14px 16px 16px;
+      background: #111113;
+      border: 1px solid #27272a;
+    }
+
+    .section-card h2 {
+      font-size: 1.0rem;
+      margin: 0 0 4px;
+    }
+
+    .section-card p {
       font-size: 0.85rem;
-      opacity: 0.75;
-      margin-top: 8px;
+      opacity: 0.8;
+      margin: 0 0 8px;
+    }
+
+    .section-card a {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: #a855f7;
+    }
+
+    .section-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px 32px;
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+
+    @media (min-width: 720px) {
+      .sections {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
 <body>
-  <h1>hikage photo</h1>
+  <header>
+    <div class="logo">hikage photo</div>
+    <nav>
+      <a href="city.html">City</a>
+      <a href="plants.html">Plants</a>
+      <a href="cat.html">Cat</a>
+    </nav>
+  </header>
 
-  <figure class="photo">
-    <img src="photos/asakusa.jpg" alt="浅草の夕景" loading="lazy">
-    <figcaption>浅草・灯りがともる時間</figcaption>
-  </figure>
+  <main>
+    <section class="hero">
+      <div class="hero-img-wrap">
+        <img src="photos/asakusa.jpg" alt="浅草の夕景">
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">Evening in Asakusa</h1>
+        <p class="hero-caption">灯りがともり始める時間の街を、橋の上から眺めた一枚。</p>
+      </div>
+    </section>
 
+    <section class="sections">
+      <article class="section-card">
+        <h2>City</h2>
+        <p>街の光や看板、人の気配を追いかけながら撮った写真。</p>
+        <a href="city.html">見る</a>
+      </article>
+
+      <article class="section-card">
+        <h2>Plants</h2>
+        <p>ひまわり、蓮、彼岸花など、季節の色が強く出る植物の写真。</p>
+        <a href="plants.html">見る</a>
+      </article>
+
+      <article class="section-card">
+        <h2>Cat</h2>
+        <p>家で暮らしている猫の日常。リラックスしている瞬間を中心に。</p>
+        <a href="cat.html">見る</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 hikage photo
+  </footer>
 </body>
 </html>
