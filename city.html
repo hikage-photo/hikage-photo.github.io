@@ -114,17 +114,33 @@
     <h1>City</h1>
     <p class="intro">街の光や雑踏の気配を撮った写真を並べていきます。</p>
 
-    <section class="grid">
-      <figure>
-        <img src="photos/asakusa.jpg" alt="浅草の夕景">
-        <figcaption>浅草・ビールの看板が光り始める時間帯の交差点。</figcaption>
-      </figure>
-            <figure>
-        <img src="photos/fireflower.jpg" alt="花火">
-        <figcaption>夜空に咲いた花火。遠くから静かに眺めた一枚。</figcaption>
-      </figure>
-
-    </section>
+    <section class="grid" id="city-grid"></section>
   </main>
+
+  <script>
+    const cityPhotos = [
+      {
+        src: "photos/asakusa.jpg",
+        alt: "浅草の夕景",
+        caption: "浅草・ビールの看板が光り始める時間帯の交差点。"
+      },
+      {
+        src: "photos/fireflower.jpg",
+        alt: "花火",
+        caption: "夜空に咲いた花火。少し離れた場所から静かに見上げた一枚。"
+      }
+    ];
+
+    const cityGrid = document.getElementById("city-grid");
+
+    cityPhotos.forEach(photo => {
+      const fig = document.createElement("figure");
+      fig.innerHTML = `
+        <img src="${photo.src}" alt="${photo.alt}" loading="lazy">
+        <figcaption>${photo.caption}</figcaption>
+      `;
+      cityGrid.appendChild(fig);
+    });
+  </script>
 </body>
 </html>
