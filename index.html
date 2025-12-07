@@ -4,9 +4,48 @@
   <meta charset="utf-8">
   <title>hikage photo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 32px 16px 64px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: .02em;
+    }
+
+    .photo {
+      max-width: 960px;
+      margin: 0 auto 24px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    figcaption {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello GitHub Pages</h1>
-  <p>最初の1枚です。</p>
+  <h1>hikage photo</h1>
+
+  <figure class="photo">
+    <img src="asakusa.jpg" alt="浅草の夕景" loading="lazy">
+    <figcaption>浅草・灯りがともる時間</figcaption>
+  </figure>
+
 </body>
 </html>
