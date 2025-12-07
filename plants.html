@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Plants – hikage photo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #09090b;
+      color: #f4f4f5;
+    }
+
+    header {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 16px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      margin-left: 14px;
+      text-decoration: none;
+      color: #e4e4e7;
+      opacity: 0.8;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 16px 48px;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      margin: 4px 0 10px;
+    }
+
+    .intro {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    figure {
+      margin: 0;
+      background: #111113;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #27272a;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      padding: 8px 10px 10px;
+    }
+
+    a.back {
+      display: inline-block;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: #a855f7;
+    }
+
+    a.back:hover { text-decoration: underline; }
+
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">hikage photo</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="city.html">City</a>
+      <a href="plants.html">Plants</a>
+      <a href="cat.html">Cat</a>
+    </nav>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← トップへ戻る</a>
+    <h1>Plants</h1>
+    <p class="intro">季節ごとに撮った花の写真たち。</p>
+
+    <section class="grid">
+      <figure>
+        <img src="photos/sunflower.jpg" alt="ひまわり">
+        <figcaption>夏の光をいっぱいに浴びたひまわり。</figcaption>
+      </figure>
+
+      <figure>
+        <img src="photos/lotus.jpg" alt="蓮">
+        <figcaption>静かな水面から立ち上がる蓮の花。</figcaption>
+      </figure>
+
+      <figure>
+        <img src="photos/red_spider_lily.jpg" alt="彼岸花">
+        <figcaption>赤い彼岸花。少しだけ不穏で、でも綺麗な色。</figcaption>
+      </figure>
+
+      <figure>
+        <img src="photos/fireflower.jpg" alt="花のマクロ">
+        <figcaption>火のように見えた花びらの一部を切り取った一枚。</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
