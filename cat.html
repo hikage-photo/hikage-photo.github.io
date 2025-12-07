@@ -108,14 +108,30 @@
   <main>
     <a class="back" href="index.html">← トップへ戻る</a>
     <h1>Cat</h1>
-    <p class="intro">家で暮らしている猫の写真。のんびりしている瞬間中心。</p>
+    <p class="intro">家で暮らしている猫の写真。寝ているときと変なポーズの割合が多め。</p>
 
-    <section class="grid">
-      <figure>
-        <img src="photos/cat1.jpg" alt="猫の写真">
-        <figcaption>くつろいでいるところをそっと撮った一枚。</figcaption>
-      </figure>
-    </section>
+    <section class="grid" id="cat-grid"></section>
   </main>
+
+  <script>
+    const cats = [
+      {
+        src: "photos/cat1.jpg",
+        alt: "くつろぐ猫",
+        caption: "ソファでくつろいでいるところをそっと撮った一枚。"
+      }
+    ];
+
+    const catGrid = document.getElementById("cat-grid");
+
+    cats.forEach(photo => {
+      const fig = document.createElement("figure");
+      fig.innerHTML = `
+        <img src="${photo.src}" alt="${photo.alt}" loading="lazy">
+        <figcaption>${photo.caption}</figcaption>
+      `;
+      catGrid.appendChild(fig);
+    });
+  </script>
 </body>
 </html>
